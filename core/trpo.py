@@ -65,6 +65,7 @@ def trpo_step(policy_net, value_net, states, actions, returns, advantages, max_k
 
     """update policy"""
     fixed_log_probs = policy_net.get_log_prob(Variable(states, volatile=True), Variable(actions)).data
+
     """define the loss function for TRPO"""
     def get_loss(volatile=False):
         log_probs = policy_net.get_log_prob(Variable(states, volatile=volatile), Variable(actions))
@@ -110,7 +111,7 @@ def trpo_step(policy_net, value_net, states, actions, returns, advantages, max_k
     loss = get_loss()
     grads = torch.autograd.grad(loss, policy_net.parameters())
     loss_grad = torch.cat([grad.view(-1) for grad in grads]).data
-    stepdir = conjugate_gradients(Fvp, -loss_grad, 10)
+    stepdir = conjugate_gradients(Fvp, -loss_grad, 20)
 
     shs = 0.5 * (stepdir.dot(Fvp(stepdir)))
     lm = math.sqrt(max_kl / shs)

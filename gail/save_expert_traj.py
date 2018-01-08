@@ -3,6 +3,7 @@ import gym
 import os
 import sys
 import pickle
+import  time
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from itertools import count
@@ -64,6 +65,7 @@ def main_loop():
 
             if args.render:
                 env.render()
+                time.sleep(0.01)
             if done or num_steps >= args.max_expert_state_num:
                 break
 

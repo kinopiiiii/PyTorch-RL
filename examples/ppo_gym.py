@@ -4,6 +4,9 @@ import os
 import sys
 import pickle
 import time
+import pyperclip
+import csv
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from utils import *
@@ -14,6 +17,7 @@ from torch.autograd import Variable
 from core.ppo import ppo_step
 from core.common import estimate_advantages
 from core.agent import Agent
+from datetime import datetime as dt
 
 Tensor = DoubleTensor
 torch.set_default_tensor_type('torch.DoubleTensor')
@@ -43,11 +47,11 @@ parser.add_argument('--seed', type=int, default=1, metavar='N',
                     help='random seed (default: 1)')
 parser.add_argument('--min-batch-size', type=int, default=2048, metavar='N',
                     help='minimal batch size per PPO update (default: 2048)')
-parser.add_argument('--max-iter-num', type=int, default=500, metavar='N',
+parser.add_argument('--max-iter-num', type=int, default=5000, metavar='N',
                     help='maximal number of main iterations (default: 500)')
 parser.add_argument('--log-interval', type=int, default=1, metavar='N',
                     help='interval between training status logs (default: 10)')
-parser.add_argument('--save-model-interval', type=int, default=0, metavar='N',
+parser.add_argument('--save-model-interval', type=int, default=100, metavar='N',
                     help="interval between saving model (default: 0, means don't save)")
 args = parser.parse_args()
 
@@ -91,6 +95,9 @@ optimizer_value = torch.optim.Adam(value_net.parameters(), lr=args.learning_rate
 # optimization epoch number and batch size for PPO
 optim_epochs = 5
 optim_batch_size = 4096
+#optim_epochs = 10
+#optim_batch_size = 64
+
 
 """create agent"""
 agent = Agent(env_factory, policy_net, running_state=running_state, render=args.render, num_threads=args.num_threads)
@@ -131,6 +138,14 @@ def update_params(batch, i_iter):
 
 
 def main_loop():
+    LOGGING = False
+    print("LOGGING = ", LOGGING)
+    if LOGGING:
+        tstr = dt.now().strftime('%m-%d-%H-%M')
+        assets_path = "./assets/learned_models/PPO/" + args.env_name + "/" + tstr
+        os.mkdir(assets_path)
+        log_path = "./log/PPO/" + args.env_name + "/" + tstr
+        os.mkdir(log_path)
     for i_iter in range(args.max_iter_num):
         """generate multiple trajectories that reach the minimum batch_size"""
         batch, log = agent.collect_samples(args.min_batch_size)
@@ -140,13 +155,23 @@ def main_loop():
 
         if i_iter % args.log_interval == 0:
             print('{}\tT_sample {:.4f}\tT_update {:.4f}\tR_min {:.2f}\tR_max {:.2f}\tR_avg {:.2f}'.format(
-                i_iter, log['sample_time'], t1-t0, log['min_reward'], log['max_reward'], log['avg_reward']))
+                i_iter, log['sample_time'], t1 - t0, log['min_reward'], log['max_reward'], log['avg_reward']))
 
-        if args.save_model_interval > 0 and (i_iter+1) % args.save_model_interval == 0:
+            if LOGGING:
+                with open(os.path.join('./log/PPO/{}/{}/PPO_{}.csv'.format(args.env_name, tstr, args.env_name)), 'a', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow([i_iter, log['avg_reward']])
+
+        if args.save_model_interval > 0 and (i_iter + 1) % args.save_model_interval == 0:
             if use_gpu:
                 policy_net.cpu(), value_net.cpu()
-            pickle.dump((policy_net, value_net, running_state),
-                        open(os.path.join(assets_dir(), 'learned_models/{}_ppo.p'.format(args.env_name)), 'wb'))
+
+            # pickle.dump((policy_net, value_net, running_state), open(os.path.join(assets_path, "PPO_{}.p".format(args.env_name))), 'wb')
+            if LOGGING:
+                pickle.dump((policy_net, value_net, running_state),
+                            open(os.path.join(assets_dir(), 'learned_models/PPO/{}/{}/PPO_{}_[{}]_.p'.format(args.env_name, tstr, args.env_name,
+                                                                                          i_iter)), 'wb'))
+
             if use_gpu:
                 policy_net.cuda(), value_net.cuda()
 

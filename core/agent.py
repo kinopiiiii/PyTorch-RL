@@ -44,7 +44,7 @@ def collect_samples(pid, queue, env, policy, custom_reward, mean_action,
                 min_c_reward = min(min_c_reward, reward)
                 max_c_reward = max(max_c_reward, reward)
 
-            mask = 0 if done else 1
+            mask = 0 if done else 1  # mask:終了判定 doneと逆
 
             memory.push(state, action, mask, next_state, reward)
 
@@ -117,7 +117,7 @@ class Agent:
         t_start = time.time()
         if use_gpu:
             self.policy.cpu()
-        thread_batch_size = int(math.floor(min_batch_size / self.num_threads))
+        thread_batch_size = int(math.floor(min_batch_size / self.num_threads))  # (最小バッチ（サンプリングタイムステップ）サイズ（2048）/スレッド（4）)
         queue = multiprocessing.Queue()
         workers = []
 
