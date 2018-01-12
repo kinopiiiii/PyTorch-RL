@@ -1,5 +1,5 @@
 import multiprocessing
-from utils.replay_memory import Memory
+from utils.replay_memory_term import MemoryTerm
 from utils.torch import *
 from torch.autograd import Variable
 import math
@@ -10,7 +10,7 @@ def collect_samples(pid, queue, env, policy, custom_reward, mean_action,
                     tensor, render, running_state, update_rs, min_batch_size):
     torch.randn(pid, )
     log = dict()
-    memory = Memory()
+    memory = MemoryTerm()
     num_steps = 0
     total_reward = 0
     min_reward = 1e6
@@ -33,7 +33,7 @@ def collect_samples(pid, queue, env, policy, custom_reward, mean_action,
             else:
                 action = policy.select_action(state_var)[0].numpy()
             action = int(action) if policy.is_disc_action else action.astype(np.float64)
-            next_state, reward, done, _ = env.step(action)
+            next_state, reward, done, terminal_condition = env.step(action)
             reward_episode += reward
             if running_state is not None:
                 next_state = running_state(next_state, update=update_rs)
@@ -46,7 +46,7 @@ def collect_samples(pid, queue, env, policy, custom_reward, mean_action,
 
             mask = 0 if done else 1  # mask:終了判定 doneと逆
 
-            memory.push(state, action, mask, next_state, reward)
+            memory.push(state, action, mask, next_state, reward, terminal_condition)
 
             if render:
                 env.render()
@@ -97,7 +97,7 @@ def merge_log(log_list):
     return log
 
 
-class Agent:
+class AgentTerm:
 
     def __init__(self, env_factory, policy, custom_reward=None, mean_action=False, render=False,
                  tensor_type=torch.DoubleTensor, running_state=None, num_threads=1):

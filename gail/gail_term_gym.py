@@ -19,10 +19,12 @@ from torch import nn
 from core.ppo import ppo_step
 from core.common import estimate_advantages
 from core.agent import Agent
+from core.agent_term import AgentTerm
 from datetime import datetime as dt
 from dm_control import suite
 
 DEBUG = False
+term_num = 0
 
 Tensor = DoubleTensor
 torch.set_default_tensor_type('torch.DoubleTensor')
@@ -108,26 +110,68 @@ def expert_reward(state, action):
 
 
 """create agent"""
-agent = Agent(env_factory, policy_net, custom_reward=expert_reward,
+agent = AgentTerm(env_factory, policy_net, custom_reward=expert_reward,
               running_state=running_state, render=args.render, num_threads=args.num_threads)
 
 """batchが学習対象の\pi_\theta"""
 
 
 def update_params(batch, i_iter):
+    states_term_ = []
+    actions_term_ = []
+    rewards_term_ = []
+    masks_term_ = []
+    states_ = []
+    actions_ = []
+    rewards_ = []
+    masks_ = []
+    TERMINAL = False
+    FULL_TERMINAL = False
+    global term_num
+    term_num = 0
 
+    for batch_i in range(99,len(batch.state),100):
+        #print(batch_i)
+        if batch.term[batch_i] == 1:
+            for batch_j in range(100):
+                TERMINAL = True
+                states_term_.append(batch.state[batch_i-99+batch_j])
+                actions_term_.append(batch.action[batch_i-99+batch_j])
+                rewards_term_.append(batch.reward[batch_i-99+batch_j])
+                masks_term_.append(batch.mask[batch_i-99+batch_j])
+                term_num = term_num + 1
+                #print(term_num)
+                if term_num == 2400:
+                    FULL_TERMINAL = True
+
+        else:
+            for batch_k in range(100):
+                states_.append(batch.state[batch_i-99+batch_k])
+                actions_.append(batch.action[batch_i-99+batch_k])
+                rewards_.append(batch.reward[batch_i-99+batch_k])
+                masks_.append(batch.mask[batch_i-99+batch_k])
     """batch(学習対象)の抜き出し"""
-    states = torch.from_numpy(np.stack(batch.state))
-    actions = torch.from_numpy(np.stack(batch.action))
-    rewards = torch.from_numpy(np.stack(batch.reward))
-    masks = torch.from_numpy(np.stack(batch.mask).astype(np.float64))
-    if use_gpu:
-        states, actions, rewards, masks = states.cuda(), actions.cuda(), rewards.cuda(), masks.cuda()
-    values = value_net(Variable(states, volatile=True)).data  # 状態価値の算出?
-    fixed_log_probs = policy_net.get_log_prob(Variable(states, volatile=True), Variable(actions)).data  # πθoldの算出（PPOのrの下）
+    if not FULL_TERMINAL:
+        states = torch.from_numpy(np.stack(states_))
+        actions = torch.from_numpy(np.stack(actions_))
+        rewards = torch.from_numpy(np.stack(rewards_))
+        masks = torch.from_numpy(np.stack(masks_).astype(np.float64))
+        if use_gpu:
+            states, actions, rewards, masks = states.cuda(), actions.cuda(), rewards.cuda(), masks.cuda()
+        values = value_net(Variable(states, volatile=True)).data  # 状態価値の算出?
+        fixed_log_probs = policy_net.get_log_prob(Variable(states, volatile=True), Variable(actions)).data  # πθoldの算出（PPOのrの下）
+
+    if TERMINAL:
+        states_term = torch.from_numpy(np.stack(states_term_))
+        actions_term = torch.from_numpy(np.stack(actions_term_))
+        rewards_term = torch.from_numpy(np.stack(rewards_term_))
+        masks_term = torch.from_numpy(np.stack(masks_term_).astype(np.float64))
+        if use_gpu:
+            states_term, actions_term, rewards_term, masks_term = states_term.cuda(), actions_term.cuda(), rewards_term.cuda(), masks_term.cuda()
 
     """get advantage estimation from the trajectories"""
-    advantages, returns = estimate_advantages(rewards, masks, values, args.gamma, args.tau, use_gpu)  # アドバンテージ関数の推定
+    if not FULL_TERMINAL:
+        advantages, returns = estimate_advantages(rewards, masks, values, args.gamma, args.tau, use_gpu)  # アドバンテージ関数の推定
 
     lr_mult = max(1.0 - float(i_iter) / args.max_iter_num, 0)  # わからん
 
@@ -137,14 +181,30 @@ def update_params(batch, i_iter):
         エキスパート配列 50000*30 状態23 行動7
         学習軌道配列   2400*30 状態23 行動7
         """
+
         expert_state_actions = Tensor(expert_traj)  # エキスパートの配列をDoubleTensorに変換
         if use_gpu:
             expert_state_actions = expert_state_actions.cuda()
-        g_o = discrim_net(Variable(torch.cat([states, actions], 1)))  # D(G) Gの状態，行動データを連結して，Dに入力，結果受け取る
+
+        if TERMINAL:
+            torch_state_action = torch.cat([states_term, actions_term], 1)
+            expert_state_actions = torch.cat([expert_state_actions, torch_state_action], 0)
+            #print(expert_state_actions.shape)
+
+        if not FULL_TERMINAL:
+            #print(torch.cat([states, actions], 1).shape)
+            g_o = discrim_net(Variable(torch.cat([states, actions], 1)))  # D(G) Gの状態，行動データを連結して，Dに入力，結果受け取る
         e_o = discrim_net(Variable(expert_state_actions))  # D(E) エキスパートの状態，行動データを連結して，Dに入力，結果受け取る
         optimizer_discrim.zero_grad()
+
         """全部1の配列との相互エントロピー（D（G）を1に近づけるための損失関数）+全部0の配列との相互エントロピー（D（E）を0に近づけるための損失関数）"""
-        discrim_loss = discrim_criterion(g_o, Variable(ones((states.shape[0], 1)))) + discrim_criterion(e_o, Variable(zeros((expert_traj.shape[0], 1))))
+        if TERMINAL:
+            if FULL_TERMINAL:
+                discrim_loss = discrim_criterion(e_o, Variable(zeros((expert_traj.shape[0]+states_term.shape[0], 1))))
+            else:
+                discrim_loss = discrim_criterion(g_o, Variable(ones((states.shape[0], 1)))) + discrim_criterion(e_o, Variable(zeros((expert_traj.shape[0] + states_term.shape[0], 1))))
+        else:
+            discrim_loss = discrim_criterion(g_o, Variable(ones((states.shape[0], 1)))) + discrim_criterion(e_o, Variable(zeros((expert_traj.shape[0], 1))))
         discrim_loss.backward()  # Dの逆伝播
         optimizer_discrim.step()  # DのADAM更新
 
@@ -158,36 +218,37 @@ def update_params(batch, i_iter):
             # print("Variable(ones((states.shape[0], 1)))",Variable(ones((states.shape[0], 1))))
             # print("discrim_criterion(g_o, Variable(ones((states.shape[0], 1))))",discrim_criterion(g_o, Variable(ones((states.shape[0], 1)))))
             print("discrim_loss", discrim_loss)  # 損失関数
+    if not FULL_TERMINAL:
+        """Generator(PPO)の更新 ミニバッチ学習"""
+        # optimization epoch number and batch size for PPO
+        optim_epochs = 5  # PPOのエポック数
+        optim_batch_size = 4096  # PPOのバッチサイズ
+        #optim_epochs = 10
+        #optim_batch_size = 64
 
-    """Generator(PPO)の更新 ミニバッチ学習"""
-    # optimization epoch number and batch size for PPO
-    optim_epochs = 5  # PPOのエポック数
-    optim_batch_size = 4096  # PPOのバッチサイズ
-    #optim_epochs = 10
-    #optim_batch_size = 64
-
-    optim_iter_num = int(math.ceil(states.shape[0] / optim_batch_size))  # 最適イテレーション数: バッチ数（2400?）/最適バッチサイズ4096 の切り上げ（1）
-    for _ in range(optim_epochs):  # PPOのエポック数学習
-        perm = np.arange(states.shape[0])
-        np.random.shuffle(perm)
-        perm = LongTensor(perm)
-        if use_gpu:
-            perm = perm.cuda()
-        states, actions, returns, advantages, fixed_log_probs = states[perm], actions[perm], returns[perm], advantages[perm], fixed_log_probs[perm]
-        for i in range(optim_iter_num):  # バッチサイズで分割して，optim_iter_num分 PPOの学習
-            ind = slice(i * optim_batch_size, min((i + 1) * optim_batch_size, states.shape[0]))
-            states_b, actions_b, advantages_b, returns_b, fixed_log_probs_b = states[ind], actions[ind], advantages[ind], returns[ind], fixed_log_probs[ind]
-            ppo_step(policy_net, value_net, optimizer_policy, optimizer_value, 1, states_b, actions_b, returns_b, advantages_b, fixed_log_probs_b, lr_mult, args.learning_rate, args.clip_epsilon, args.l2_reg)
+        optim_iter_num = int(math.ceil(states.shape[0] / optim_batch_size))  # 最適イテレーション数: バッチ数（2400?）/最適バッチサイズ4096 の切り上げ（1）
+        for _ in range(optim_epochs):  # PPOのエポック数学習
+            perm = np.arange(states.shape[0])
+            np.random.shuffle(perm)
+            perm = LongTensor(perm)
+            if use_gpu:
+                perm = perm.cuda()
+            states, actions, returns, advantages, fixed_log_probs = states[perm], actions[perm], returns[perm], advantages[perm], fixed_log_probs[perm]
+            for i in range(optim_iter_num):  # バッチサイズで分割して，optim_iter_num分 PPOの学習
+                ind = slice(i * optim_batch_size, min((i + 1) * optim_batch_size, states.shape[0]))
+                states_b, actions_b, advantages_b, returns_b, fixed_log_probs_b = states[ind], actions[ind], advantages[ind], returns[ind], fixed_log_probs[ind]
+                ppo_step(policy_net, value_net, optimizer_policy, optimizer_value, 1, states_b, actions_b, returns_b, advantages_b, fixed_log_probs_b, lr_mult, args.learning_rate, args.clip_epsilon, args.l2_reg)
 
 
 def main_loop():
+    global term_num
     LOGGING = True
     print("LOGGING = ", LOGGING)
     if LOGGING:
         tstr = dt.now().strftime('%m-%d-%H-%M')
-        assets_path = "./assets/GAIL_PPO/" + args.env_name + "/" + tstr
+        assets_path = "./assets/GAIL_TERM/" + args.env_name + "/" + tstr
         os.mkdir(assets_path)
-        log_path = "./log/GAIL_PPO/" + args.env_name + "/" + tstr
+        log_path = "./log/GAIL_TERM/" + args.env_name + "/" + tstr
         os.mkdir(log_path)
 
     for i_iter in range(args.max_iter_num):
@@ -198,26 +259,29 @@ def main_loop():
         if use_gpu:
             discrim_net.cuda()
 
+        #print("batch",batch)
+        #print("batch_term",batch_term)
+
         t0 = time.time()
         update_params(batch, i_iter)  # 学習部（パラメータ更新）
         t1 = time.time()
 
         if i_iter % args.log_interval == 0:
             """報酬等のデータの書き出し"""
-            print('{}\tT_sample {:.4f}\tT_update {:.4f}\texpert_R_avg {:.2f}\tR_avg {:.2f}'.format(i_iter, log['sample_time'], t1 - t0, log['avg_c_reward'], log['avg_reward']))
+            print('{} {}\tT_sample {:.4f}\tT_update {:.4f}\texpert_R_avg {:.2f}\tR_avg {:.2f}\tTerm_num {}'.format(i_iter, args.env_name, log['sample_time'], t1 - t0, log['avg_c_reward'], log['avg_reward'],term_num))
 
             if LOGGING:
-                with open(os.path.join('./log/GAIL_PPO/{}/{}/GAIL_PPO_{}.csv'.format(args.env_name, tstr, args.env_name)), 'a', newline='') as f:
+                with open(os.path.join('./log/GAIL_TERM/{}/{}/GAIL_TERM_{}.csv'.format(args.env_name, tstr, args.env_name)), 'a', newline='') as f:
                     writer = csv.writer(f)
-                    writer.writerow([i_iter, log['avg_reward'], log['avg_c_reward']])
+                    writer.writerow([i_iter, log['avg_reward'], log['avg_c_reward'], term_num])
 
         if args.save_model_interval > 0 and (i_iter + 1) % args.save_model_interval == 0:
             if use_gpu:
                 policy_net.cpu(), value_net.cpu(), discrim_net.cpu()
             if LOGGING:
                 """方策，価値，D(or状態)の保存"""
-                pickle.dump((policy_net, value_net, running_state), open(os.path.join(assets_dir(), 'GAIL_PPO/{}/{}/GAIL_PPO_STATE{}_[{}]_.p'.format(args.env_name, tstr, args.env_name, i_iter)), 'wb'))
-                pickle.dump((policy_net, value_net, discrim_net), open(os.path.join(assets_dir(), 'GAIL_PPO/{}/{}/GAIL_PPO_DIS{}_[{}]_.p'.format(args.env_name, tstr, args.env_name, i_iter)), 'wb'))
+                pickle.dump((policy_net, value_net, running_state), open(os.path.join(assets_dir(), 'GAIL_TERM/{}/{}/GAIL_TERM_STATE{}_[{}]_.p'.format(args.env_name, tstr, args.env_name, i_iter)), 'wb'))
+                pickle.dump((policy_net, value_net, discrim_net), open(os.path.join(assets_dir(), 'GAIL_TERM/{}/{}/GAIL_TERM_DIS{}_[{}]_.p'.format(args.env_name, tstr, args.env_name, i_iter)), 'wb'))
             if use_gpu:
                 policy_net.cuda(), value_net.cuda(), discrim_net.cuda()
 
