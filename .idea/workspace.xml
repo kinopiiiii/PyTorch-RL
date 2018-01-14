@@ -2,136 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b08b09-52bb-450e-b3a3-c0889d29877b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/GAIL_execute.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/PPO_execute.sh" afterPath="$PROJECT_DIR$/PPO_execute.sh" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Pusher-v0/01-06-10-38/GAIL_PPO_DISPusher-v0_[199]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Pusher-v0/01-06-10-38/GAIL_PPO_DISPusher-v0_[99]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Pusher-v0/01-06-10-38/GAIL_PPO_STATEPusher-v0_[199]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Pusher-v0/01-06-10-38/GAIL_PPO_STATEPusher-v0_[99]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[149]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[199]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[249]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[299]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[349]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[399]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[449]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[499]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[49]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[549]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_DISStriker-v0_[99]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[149]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[199]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[249]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[299]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[349]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[399]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[449]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[499]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[49]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[549]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_PPO/Striker-v0/01-07-20-42/GAIL_PPO_STATEStriker-v0_[99]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[119]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[139]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[159]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[179]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[199]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[19]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[219]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[239]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[259]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[279]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[299]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[319]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[339]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[359]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[379]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[399]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[39]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[419]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[439]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[459]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[479]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[499]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[519]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[539]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[559]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[579]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[599]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[59]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[619]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[639]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[659]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[679]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[699]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[719]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[739]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[759]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[779]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[799]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[79]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[819]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[839]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[859]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[879]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[899]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[919]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[939]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_DISPusher-v0_[99]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[119]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[139]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[159]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[179]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[199]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[19]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[219]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[239]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[259]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[279]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[299]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[319]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[339]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[359]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[379]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[399]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[39]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[419]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[439]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[459]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[479]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[499]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[519]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[539]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[559]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[579]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[599]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[59]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[619]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[639]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[659]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[679]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[699]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[719]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[739]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[759]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[779]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[799]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[79]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[819]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[839]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[859]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[879]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[899]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[919]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[939]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/GAIL_TRPO/Pusher-v0/01-04-01-28/GAIL_TRPO_STATEPusher-v0_[99]_.p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/core/agent.py" afterPath="$PROJECT_DIR$/core/agent.py" />
-      <change beforePath="$PROJECT_DIR$/gail/gail_gym.py" afterPath="$PROJECT_DIR$/gail/gail_gym.py" />
-      <change beforePath="$PROJECT_DIR$/gail/gail_trpo_gym.py" afterPath="$PROJECT_DIR$/gail/gail_trpo_gym.py" />
-      <change beforePath="$PROJECT_DIR$/log/GAIL_PPO/Pusher-v0/01-08-14-53/GAIL_PPO_Pusher-v0.csv" afterPath="$PROJECT_DIR$/log/GAIL_PPO/Pusher-v0/01-08-14-53/GAIL_PPO_Pusher-v0.csv" />
-      <change beforePath="$PROJECT_DIR$/log/GAIL_PPO/Striker-v0/01-08-01-18/.~lock.GAIL_PPO_Striker-v0.csv#" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/log/GAIL_PPO/Thrower-v0/01-08-04-53/.~lock.GAIL_PPO_Thrower-v0.csv#" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/GAIL_TERM.sh" afterPath="$PROJECT_DIR$/GAIL_TERM.sh" />
+      <change beforePath="$PROJECT_DIR$/core/agent_term.py" afterPath="$PROJECT_DIR$/core/agent_term.py" />
+      <change beforePath="$PROJECT_DIR$/gail/gail_term_gym.py" afterPath="$PROJECT_DIR$/gail/gail_term_gym.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -145,7 +19,7 @@
       <file leaf-file-name="gail_gym.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gail/gail_gym.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2610">
+            <state relative-caret-position="18">
               <caret line="151" column="19" lean-forward="false" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -154,21 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gail_trpo_gym.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gail/gail_trpo_gym.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2808">
-              <caret line="162" column="114" lean-forward="false" selection-start-line="162" selection-start-column="114" selection-end-line="162" selection-end-column="114" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="gail_term_gym.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gail/gail_term_gym.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4842">
-              <caret line="275" column="71" lean-forward="false" selection-start-line="275" selection-start-column="71" selection-end-line="275" selection-end-column="71" />
+            <state relative-caret-position="2867">
+              <caret line="275" column="83" lean-forward="false" selection-start-line="275" selection-start-column="83" selection-end-line="275" selection-end-column="83" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -176,21 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agent.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/agent.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="agent_term.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/agent_term.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="702">
+              <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -198,13 +52,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="replay_memory_term.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/replay_memory_term.py">
+      <file leaf-file-name="pusher.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/pusher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="527">
+              <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="31" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <marker date="1515764942319" expanded="true" signature="1059:1973" ph="..." />
               </folding>
             </state>
           </provider>
@@ -213,40 +67,30 @@
       <file leaf-file-name="striker.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/striker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1098">
-              <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ppo_gym.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/ppo_gym.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="147" column="23" lean-forward="false" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
+            <state relative-caret-position="239">
+              <caret line="45" column="65" lean-forward="false" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1515908528746" expanded="true" signature="2298:2334" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ppo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/ppo.py">
+      <file leaf-file-name="thrower.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/thrower.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state relative-caret-position="491">
+              <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pusher.py" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/pusher.py">
+      <file leaf-file-name="gail_trpo_gym.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gail/gail_trpo_gym.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-74">
-              <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="898">
+              <caret line="162" column="114" lean-forward="false" selection-start-line="162" selection-start-column="114" selection-end-line="162" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -255,28 +99,8 @@
       <file leaf-file-name="mujoco_env.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/mujoco_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="92" column="7" lean-forward="false" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mjcore.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/mujoco_py/mjcore.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1314">
-              <caret line="79" column="16" lean-forward="false" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="thrower.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/thrower.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+            <state relative-caret-position="529">
+              <caret line="123" column="33" lean-forward="false" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -293,11 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mask</find>
-      <find>expe</find>
-      <find>Polic</find>
-      <find>poli</find>
-      <find>tau</find>
       <find>KL</find>
       <find>optim_epochs</find>
       <find>optim_batch_size</find>
@@ -320,9 +139,14 @@
       <find>pid</find>
       <find>batch</find>
       <find>PPO</find>
-      <find>time</find>
       <find>prin</find>
       <find>print</find>
+      <find>timestep</find>
+      <find>term</find>
+      <find>min</find>
+      <find>terminal_</find>
+      <find>time</find>
+      <find>self._first_vec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -354,12 +178,12 @@
         <option value="$PROJECT_DIR$/core/agent.py" />
         <option value="$PROJECT_DIR$/gail/gail_gym.py" />
         <option value="$PROJECT_DIR$/utils/replay_memory_term.py" />
+        <option value="$PROJECT_DIR$/examples/ppo_gym.py" />
+        <option value="$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/pusher.py" />
+        <option value="$PROJECT_DIR$/core/agent_term.py" />
         <option value="$PROJECT_DIR$/gail/gail_term_gym.py" />
         <option value="$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/striker.py" />
-        <option value="$PROJECT_DIR$/examples/ppo_gym.py" />
-        <option value="$PROJECT_DIR$/core/agent_term.py" />
         <option value="$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/thrower.py" />
-        <option value="$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/pusher.py" />
       </list>
     </option>
   </component>
@@ -415,6 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -487,15 +312,24 @@
               <item name="envs" type="462c0819:PsiDirectoryNode" />
               <item name="mujoco" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PyTorch-RL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.5 (gail-tf) (1) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="gym" type="462c0819:PsiDirectoryNode" />
+              <item name="gym" type="462c0819:PsiDirectoryNode" />
+              <item name="envs" type="462c0819:PsiDirectoryNode" />
+              <item name="mujoco" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -533,18 +367,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="1069" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299389" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -564,52 +399,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/dm_control/suite/common/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/dm_control/suite/common/visual.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gail/gail_dm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="65" column="18" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/dm_control/suite/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2034">
-          <caret line="139" column="2" lean-forward="false" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/dm_control/suite/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="74" lean-forward="false" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/mlp_policy_disc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -624,13 +417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/mlp_policy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -718,24 +504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gail/test_dm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-919427155/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="2864" column="24" lean-forward="true" selection-start-line="2864" selection-start-column="24" selection-end-line="2864" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -771,20 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2232">
           <caret line="126" column="20" lean-forward="false" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/trpo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="41" column="86" lean-forward="false" selection-start-line="41" selection-start-column="86" selection-end-line="41" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/mlp_discriminator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -830,20 +588,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/ppo_gym.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="147" column="23" lean-forward="false" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/mujoco_py/mjcore.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
           <caret line="79" column="16" lean-forward="false" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-919427155/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1769">
+          <caret line="2856" column="8" lean-forward="false" selection-start-line="2856" selection-start-column="8" selection-end-line="2856" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ppo_gym.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="147" column="23" lean-forward="false" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/replay_memory_term.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="true" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -856,51 +638,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/agent.py">
+    <entry file="file://$PROJECT_DIR$/core/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+        <state relative-caret-position="270">
+          <caret line="15" column="74" lean-forward="false" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gail/gail_term_gym.py">
+    <entry file="file://$PROJECT_DIR$/core/trpo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4842">
-          <caret line="275" column="71" lean-forward="false" selection-start-line="275" selection-start-column="71" selection-end-line="275" selection-end-column="71" />
+        <state relative-caret-position="684">
+          <caret line="41" column="86" lean-forward="false" selection-start-line="41" selection-start-column="86" selection-end-line="41" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/mlp_critic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/thrower.py">
+    <entry file="file://$PROJECT_DIR$/models/mlp_policy_disc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        <state relative-caret-position="633">
+          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/mujoco_env.py">
+    <entry file="file://$PROJECT_DIR$/models/mlp_policy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="92" column="7" lean-forward="false" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
+        <state relative-caret-position="72">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gail/gail_trpo_gym.py">
+    <entry file="file://$PROJECT_DIR$/models/mlp_discriminator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2808">
-          <caret line="162" column="114" lean-forward="false" selection-start-line="162" selection-start-column="114" selection-end-line="162" selection-end-column="114" />
+        <state relative-caret-position="72">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gail/save_expert_traj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gail/test_dm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gail/gail_gym.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
+        <state relative-caret-position="18">
           <caret line="151" column="19" lean-forward="false" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -908,38 +716,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/replay_memory_term.py">
+    <entry file="file://$USER_HOME$/gym/gym/envs/mujoco/assets/thrower.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/gym/gym/envs/mujoco/assets/pusher.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/agent_term.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        <state relative-caret-position="702">
+          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/striker.py">
+    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/mujoco_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        <state relative-caret-position="529">
+          <caret line="123" column="33" lean-forward="false" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gail/gail_term_gym.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2867">
+          <caret line="275" column="83" lean-forward="false" selection-start-line="275" selection-start-column="83" selection-end-line="275" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/pusher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="527">
+          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <marker date="1515764942319" expanded="true" signature="1059:1973" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/striker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="45" column="65" lean-forward="false" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+          <folding>
+            <marker date="1515908528746" expanded="true" signature="2298:2334" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/gail-tf/lib/python3.5/site-packages/gym/envs/mujoco/thrower.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gail/gail_trpo_gym.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="162" column="114" lean-forward="false" selection-start-line="162" selection-start-column="114" selection-end-line="162" selection-end-column="114" />
           <folding />
         </state>
       </provider>

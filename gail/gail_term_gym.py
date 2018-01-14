@@ -268,12 +268,12 @@ def main_loop():
 
         if i_iter % args.log_interval == 0:
             """報酬等のデータの書き出し"""
-            print('{} {}\tT_sample {:.4f}\tT_update {:.4f}\texpert_R_avg {:.2f}\tR_avg {:.2f}\tTerm_num {}'.format(i_iter, args.env_name, log['sample_time'], t1 - t0, log['avg_c_reward'], log['avg_reward'],term_num))
+            print('{} {} samp:{:.4f}  update:{:.4f}  ex_R_avg:{:.2f}  Score:{:.2f}  pScore:{:.4f}  Rate:{:.2f}'.format(i_iter, args.env_name, log['sample_time'], t1 - t0, log['avg_c_reward'], log['avg_reward'],log['avg_path_reward'],term_num/24))
 
             if LOGGING:
                 with open(os.path.join('./log/GAIL_TERM/{}/{}/GAIL_TERM_{}.csv'.format(args.env_name, tstr, args.env_name)), 'a', newline='') as f:
                     writer = csv.writer(f)
-                    writer.writerow([i_iter, log['avg_reward'], log['avg_c_reward'], term_num])
+                    writer.writerow([i_iter, log['avg_c_reward'], log['avg_reward'],log['avg_path_reward'],term_num/24])
 
         if args.save_model_interval > 0 and (i_iter + 1) % args.save_model_interval == 0:
             if use_gpu:

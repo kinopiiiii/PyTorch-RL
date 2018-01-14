@@ -13,6 +13,7 @@ def collect_samples(pid, queue, env, policy, custom_reward, mean_action,
     memory = MemoryTerm()
     num_steps = 0
     total_reward = 0
+    total_path_reward = 0
     min_reward = 1e6
     max_reward = -1e6
     total_c_reward = 0
@@ -33,7 +34,15 @@ def collect_samples(pid, queue, env, policy, custom_reward, mean_action,
             else:
                 action = policy.select_action(state_var)[0].numpy()
             action = int(action) if policy.is_disc_action else action.astype(np.float64)
-            next_state, reward, done, terminal_condition = env.step(action)
+            next_state, reward, done, d = env.step(action)
+            terminal_condition = d.get('terminal_condition')
+            if t ==99:
+                path_reward = d.get('path_reward')
+
+            #terminal_condition = d[terminal_condition]
+            #path_reward = d[path_reward]
+            #print("path_reward",path_reward)
+
             reward_episode += reward
             if running_state is not None:
                 next_state = running_state(next_state, update=update_rs)
@@ -61,6 +70,7 @@ def collect_samples(pid, queue, env, policy, custom_reward, mean_action,
         total_reward += reward_episode
         min_reward = min(min_reward, reward_episode)
         max_reward = max(max_reward, reward_episode)
+        total_path_reward += path_reward
 
     log['num_steps'] = num_steps
     log['num_episodes'] = num_episodes
@@ -68,6 +78,8 @@ def collect_samples(pid, queue, env, policy, custom_reward, mean_action,
     log['avg_reward'] = total_reward / num_episodes
     log['max_reward'] = max_reward
     log['min_reward'] = min_reward
+    log['total_path_reward'] = total_path_reward
+    log['avg_path_reward'] = total_path_reward / num_episodes
     if custom_reward is not None:
         log['total_c_reward'] = total_c_reward
         log['avg_c_reward'] = total_c_reward / num_steps
@@ -86,6 +98,8 @@ def merge_log(log_list):
     log['num_episodes'] = sum([x['num_episodes'] for x in log_list])
     log['num_steps'] = sum([x['num_steps'] for x in log_list])
     log['avg_reward'] = log['total_reward'] / log['num_episodes']
+    log['total_path_reward'] = sum([x['total_path_reward'] for x in log_list])
+    log['avg_path_reward'] = log['total_path_reward'] / log['num_episodes']
     log['max_reward'] = max([x['max_reward'] for x in log_list])
     log['min_reward'] = min([x['min_reward'] for x in log_list])
     if 'total_c_reward' in log_list[0]:
