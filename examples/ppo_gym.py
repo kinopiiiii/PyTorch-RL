@@ -51,7 +51,7 @@ parser.add_argument('--max-iter-num', type=int, default=5000, metavar='N',
                     help='maximal number of main iterations (default: 500)')
 parser.add_argument('--log-interval', type=int, default=1, metavar='N',
                     help='interval between training status logs (default: 10)')
-parser.add_argument('--save-model-interval', type=int, default=100, metavar='N',
+parser.add_argument('--save-model-interval', type=int, default=10, metavar='N',
                     help="interval between saving model (default: 0, means don't save)")
 args = parser.parse_args()
 
@@ -93,10 +93,10 @@ optimizer_policy = torch.optim.Adam(policy_net.parameters(), lr=args.learning_ra
 optimizer_value = torch.optim.Adam(value_net.parameters(), lr=args.learning_rate)
 
 # optimization epoch number and batch size for PPO
-optim_epochs = 5
-optim_batch_size = 4096
-#optim_epochs = 10
-#optim_batch_size = 64
+#optim_epochs = 5
+#optim_batch_size = 4096
+optim_epochs = 10
+optim_batch_size = 64
 
 
 """create agent"""
@@ -138,7 +138,7 @@ def update_params(batch, i_iter):
 
 
 def main_loop():
-    LOGGING = False
+    LOGGING = True
     print("LOGGING = ", LOGGING)
     if LOGGING:
         tstr = dt.now().strftime('%m-%d-%H-%M')

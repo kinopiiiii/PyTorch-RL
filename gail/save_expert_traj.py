@@ -34,7 +34,6 @@ if use_gpu:
 
 is_disc_action = len(env.action_space.shape) == 0
 state_dim = env.observation_space.shape[0]
-
 policy_net, _, running_state = pickle.load(open(args.model_path, "rb"))
 expert_traj = []
 
@@ -48,6 +47,8 @@ def main_loop():
         state = env.reset()
         state = running_state(state)
         reward_episode = 0
+        path_reward = 0
+        terminal_condition = 0
 
         for t in range(10000):
             state_var = Variable(Tensor(state).unsqueeze(0),  volatile=True)
@@ -56,11 +57,18 @@ def main_loop():
             # choose stochastic action
             # action = policy_net.select_action(state_var)[0].cpu().numpy()
             action = int(action) if is_disc_action else action.astype(np.float64)
+            #action = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+            #env.statevector()
+            #print(state)
             next_state, reward, done, _ = env.step(action)
+
+            if t == 99:
+                path_reward = _.get('path_reward')
+                terminal_condition = _.get('terminal_condition')
+
             next_state = running_state(next_state)
             reward_episode += reward
             num_steps += 1
-
             expert_traj.append(np.hstack([state, action]))
 
             if args.render:
@@ -71,7 +79,7 @@ def main_loop():
 
             state = next_state
 
-        print('Episode {}\t reward: {:.2f}'.format(i_episode, reward_episode))
+        print('Episode {}\t reward: {:.2f} {:.2f} {:.2f}'.format(i_episode, reward_episode ,path_reward, terminal_condition))
 
         if num_steps >= args.max_expert_state_num:
             break
